@@ -1,0 +1,3325 @@
+// Framwork Styles
+@import 'bootstrap-4.6.0/scss/bootstrap'
+//icon Fonts
+// @import url('font-awesome-4.7.0/font-awesome.css')
+//CSS Animate
+// @import url('animate.min.css')
+
+
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+//theme_variables
+@import '_theme_variables'
+@import '_sass_custom_attributes'
+
+@mixin primary_button() 
+  background: #006747
+  color: #fff
+  padding: 8px 28px
+  border-radius: 50px
+  border: 1px solid #006747
+  font-size: 16px
+  &:hover 
+    background: transparent
+    color: #000
+    border: 1px solid #000
+  
+@mixin faq_style()
+  display: block
+  position: relative
+  color: #000
+  font-size: 18px
+  text-decoration: none
+  padding: 0.40rem 0px
+  font-weight: 500
+  background: url(../img/plus.png) no-repeat right 2px center
+  background-size: 24px
+
+  &[aria-expanded="true"]
+    background: url(../img/minus.png) no-repeat right 2px center
+    background-size: 14px
+    // color: #9B3250
+
+@mixin sub_title()
+  font-weight: 600
+  margin-bottom: 10px
+  font-size: 26px
+  font-family: "K2D", sans-serif
+  position: relative
+  display: inline-block
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: -5px       
+    width: 140px       
+    height: 3px        
+    background: #006747 
+  
+ 
+
+
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+html 
+  scroll-behavior: smooth
+
+body
+  font-family: $Geist
+  box-sizing: border-box
+  font-size: $font16
+a
+  color: $primary-bg
+  &:hover
+    color: $primary-bg
+    text-decoration: none
+    
+input,button
+  outline: none 0px
+
+::-moz-selection 
+  color: $primary-bg
+  background:  $primary-bg !important
+::selection
+    color: #ffffff
+    background: #006747 !important
+
+.sticky-top
+  top: 80px
+
+.ctn
+    position: absolute
+    margin-top: -60px
+
+// navrbar
+.mve_top
+  // background-color: rgb(251 247 248) !important
+.nav_menu
+  .container-fluid
+    margin: 0px 70px
+  .navbar-brand
+    margin: 0px
+    padding-top: 0px
+  .fixed-top
+    background-color: rgba(181, 238, 167, 0.4)
+    backdrop-filter: blur(4px)
+    -webkit-backdrop-filter: blur(4px)
+    padding: 6px 0px
+  .patchmantra_logo
+    width: 160px
+  .navbar-light .navbar-nav .nav-link
+    // font-weight: 600
+    color: #191919
+    padding-right: 0rem
+    padding-left: 1.8rem
+    font-size: 15px
+    &:hover
+      color: #006747 !important
+  .navbar-light .navbar-nav .active>.nav-link
+    color: #191919
+    font-weight: 700
+  .dropdown-menu
+    background: #006747
+    .dropdown-item
+      font-weight: 500
+      color: #fff
+      &:hover      
+        background: #fff
+        color: #000
+      .active
+        color: #fff !important
+        text-decoration: none
+        background-color: transparent
+
+// navbar toggle
+.nav_menu
+  .hamburger
+    margin: 0px
+    svg
+      height: 3em
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1)
+    input
+      display: none
+      &:checked + svg
+        transform: rotate(-45deg)
+        .line-top-bottom
+          stroke-dasharray: 20 300
+          stroke-dashoffset: -32.42
+  .line
+    fill: none
+    stroke: #000
+    stroke-linecap: round
+    stroke-linejoin: round
+    stroke-width: 3
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1)
+  .line-top-bottom
+    stroke-dasharray: 12 63
+  .chatboat_img_sec
+    position: absolute
+    bottom: 0%
+    z-index: 9999
+    right: -7px
+    top: 450px
+    img
+      width: 80%
+
+.destop_block
+  display: block
+
+.mb_display
+  display: none
+
+// banner_slider
+.slider_section
+  color: #000
+  // background-image: url(../img/banner_background_img.png)
+  // background-size: cover
+  // width: 100%
+  // height: 990px
+.banner_title_section
+  width: 100%
+  position: absolute
+  transform: translate(0%, -104%) 
+  .banner_details_sec
+    padding: 0px 50px
+    margin: 0px 20px
+    border-radius: 10px
+    background: #B5EEA7BD
+    .banner_details
+      display: flex
+      flex-direction: column
+      justify-content: center
+    .banner_side_image
+      padding: 24px 24px 24px 0px
+  .banner_title
+    font-size: 56px
+    line-height: 70px
+    font-weight: bold
+    font-family: $K2D
+  .banner_text
+    margin: 20px 0px
+    font-weight: 400
+    font-size: 24px
+  .buy_now_section
+    padding: 10px 0px
+    .primary_btn
+      @include primary_button()
+    .secondary_btn
+      font-size: 16px
+      margin-left: 20px
+      background: transparent
+      color: #000
+      padding: 10px 28px
+      border-radius: 50px 
+      border: 1px solid #000
+      &:hover
+        background: #006747
+        color: #fff
+        border: 1px solid #006747
+
+.carousel-indicators
+  position: absolute
+  bottom: 12%
+  left: 8%
+  display: flex
+  gap: 2px
+  list-style: none
+  padding: 0
+  margin: 0
+  right: unset
+  li
+    width: 7px
+    height: 10px
+    background-image: url('../img/dot_btn.png') // dot for inactive
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    opacity: 0.8
+    cursor: pointer
+    transition: all 0.3s ease
+    background-color: unset
+    &.active
+      width: 52px
+      height: 10px
+      background-image: url('../img/active_btn.png') // dash for active
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      opacity: 1
+
+//about
+.about_section
+  padding: 100px 0px 100px 0px
+  .padding
+    padding: 50px 0px
+  .about_content_sec
+    display: flex
+    align-items: center
+    .buy_now_section
+      .primary_btn
+        @include primary_button()
+    .about_content
+      .about_title
+        @include sub_title()
+      .about_text
+        font-size: 17px
+        padding: 22px 0px
+        color: #191919
+      h5
+        font-weight: 700
+      ul
+        margin-left: 30px
+        li
+          margin-bottom: 3px
+          &::marker
+            font-size: 18px            
+  .about_img_sec
+    img
+      width: 100%
+
+.why_patch_section
+  background-image: url(../img/why_patch_background.png)
+  background-size: cover
+  padding: 30px 0px 30px 0px  
+  .why_patch_content_sec
+    display: flex
+    align-items: center
+    .buy_now_section
+      .primary_btn
+        @include primary_button()
+    .why_patch_content
+      .why_patch_title
+        @include sub_title()
+        &::after
+          width: 190px
+      .why_patch_text
+        font-size: 17px
+        padding: 22px 0px 0px 0px
+        color: #191919
+        margin: 0px
+      h5
+        font-weight: 700
+      ul
+        margin-left: 30px
+        li
+          margin-bottom: 3px
+          &::marker
+            font-size: 18px            
+  .why_patch_img_sec
+    position: relative
+    display: inline-block
+    &::before
+      content: ""
+      position: absolute
+      top: 0px
+      left: 20px
+      width: 90%
+      height: 100%
+      background: #006747     // dark green block behind image
+      border-radius: 10px
+      z-index: 0
+    img
+      position: relative
+      z-index: 1
+      top: 24px
+      width: 90%
+      border-radius: 10px
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15)
+  .why_transdermal
+    padding: 100px 0px 0px 0px
+    .why_patch_content
+      .why_patch_title
+        @include sub_title()
+        &::after
+          width: 440px
+    .why_patch_img_sec
+      position: relative
+      display: inline-block
+      &::before
+        content: ""
+        position: absolute
+        top: 24px
+        left: 0px
+        bottom: -20px
+        width: 90%
+        height: 100%
+        background: #006747     // dark green block behind image
+        border-radius: 10px
+        z-index: 0
+      img
+        position: relative
+        z-index: 1
+        top: 0px
+        left: 20px
+        width: 90%
+        border-radius: 10px
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15)
+  .buy_now_section
+    margin: 50px 0px 0px 0px
+    display: flex
+    justify-content: center
+    align-items: center
+    .primary_btn
+      @include primary_button()
+      
+.products_section
+  padding: 60px 0
+  background: #f9f9f9
+  .owl-pagination 
+    display: none
+  .product_title    
+    @include sub_title()
+    text-align: center
+    margin-bottom: 30px
+    display: block
+    &::after      
+      width: 300px
+      left: 39%
+  .product_card
+    background: #fff
+    border-radius: 10px
+    box-shadow: #8D8D8D40
+    overflow: hidden
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+    padding-bottom: 15px
+    margin: 10px
+    &:hover
+      .primary_btn
+        background: transparent !important
+        color: #000 !important
+        border: 1px solid #000 !important
+    .product_img
+      img
+        width: 100%
+        display: block
+    .product_body
+      padding: 35px 15px 15px 15px
+      text-align: center
+      .product_name
+        font-weight: 600
+        font-size: 18px
+        color: #000
+        padding: 9px 64px 9px 10px
+        border-radius: 6px
+        display: inline-block
+        margin-bottom: 20px
+        position: absolute
+        left: 10px
+        top: 45%
+        border-top-right-radius: 40px
+        border-bottom-right-radius: 40px
+      .product_desc
+        font-size: 15px
+        color: #444
+        margin-bottom: 30px
+        min-height: 50px
+        text-align: left
+      .primary_btn
+        @include primary_button() 
+        margin: 0
+        display: inline     
+  // custom title background colors
+  .bg_teal
+    background: #00a6a6
+
+  .bg_beige
+    background: #c6b693
+
+  .bg_blue
+    background: #27a9e0
+
+  .bg_green
+    background: #a8b740
+
+.moreblog_section
+  background-image: url(../img/blog_background_img.png)
+  background-size: cover
+  padding: 50px 0px 50px 0px
+  a
+    color: #000
+    &:hover
+      .read_more
+        color: #000
+  h6
+    font-size: 18px
+    font-weight: 600
+  .blog_title
+    @include sub_title()
+    text-align: center
+    margin-bottom: 30px
+    display: block
+    &::after      
+      width: 94px
+      left: 47%
+  hr
+    margin: 10px 0px
+  .timer_setting
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .timer
+      color: #8D8D8D
+    .timer_more
+      color: #8D8D8D
+      // font-size: 18px
+      font-weight: 400    
+    p
+      margin: 0
+      font-size: 16px
+      font-weight: 500
+      display: flex
+      align-items: center     
+      gap: 4px      
+  .blog_sub_title
+    color: #000
+    padding: 0px 0px 8px 0px 
+  .read_more
+    color: #006747
+    font-size: 18px
+    font-weight: 700
+  .buy_now_section
+    display: flex
+    justify-content: center
+    align-content: center
+    .primary_btn
+      @include primary_button()
+      background: #000
+
+
+//faq
+.faq_section
+  padding: 50px 0px 80px 0px
+  .faq_section_bacground
+    background: #FAF7F3
+    padding: 50px 0px 0px 0px
+    border-bottom: 7px solid #006747
+  .padding
+    padding-bottom: 40px
+  .faq_style
+    display: flex
+    gap: 20px
+    flex-direction: column
+  .backgroung
+    // background-image: url(../img/faq_img.png)
+    // background-size: cover
+    // background-size: 100% /* width height */
+    // background-repeat: no-repeat /* optional */
+    // background-position: center  /* optional */
+    // justify-content: space-between
+  .faq_details
+    h3
+      font-size: 58px
+      color: #000
+      margin-bottom: 20px
+      font-weight: 700
+      font-family: $K2D
+    .buy_now_section
+      margin: 25px 0px
+    .primary_btn
+      @include primary_button()
+      &:hover
+        color: #000
+        border-color: #000
+  .faq 
+    padding: 40px 0px 0px 0px
+    .hdng
+      a
+        @include faq_style()
+    .card-header
+      background-color: unset
+      padding: 6px 10px
+      border: 0px
+    .cardf
+      background: #fff
+      border-radius: 6px
+      // border-bottom: 1.5px solid rgba(0, 0, 0, 0.125)
+    .card-body
+      padding: 0px 24px
+      ul
+        margin-left: 30px
+
+
+// footer
+.footer_Sec
+  padding: 30px 0px 0px 0px
+  background: #000
+  color: #FFFFFF
+  position: relative
+  .footer_logo
+    display: flex
+    align-items: center
+    margin-bottom: 80px
+    img
+      width: 160px
+  hr
+    background: #FFFFFF
+  .privacy_style
+    display: flex
+    gap: 10px
+    list-style: none
+    flex-direction: row
+    a      
+      font-size: 14px
+      font-weight: 200
+      color: #FFFFFF
+      position: relative
+      padding-bottom: 3px
+      &:hover
+        color: #fff
+        transition: color 0.3s ease
+        &::after
+          width: 100%
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        transition: width 0.3s
+        height: 2px
+        background-color: #ffffff
+  .social_icons   
+    ul
+      display: flex
+      gap: 20px
+      margin-top: 1rem
+      margin-bottom: 26px
+      li
+        list-style: none
+        i
+          width: 36px
+          height: 36px
+          background: #006747
+          display: flex
+          align-items: center
+          justify-content: center
+          border-radius: 50%
+          color: #fff
+          font-size: 18px
+          &:hover
+            background: #fff
+            color: #006747
+            transition: color 0.3s ease
+      svg
+        width: 36px
+        height: 36px
+        background: #006747
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        color: #fff
+        padding: 8px
+        &:hover
+          background: #fff
+          color: #006747
+          transition: color 0.3s ease
+  .footer_links
+      display: flex
+      gap: 20px
+      justify-content: space-between
+      ul
+        list-style: none
+        li
+          margin-bottom: 10px
+          font-size: 16px
+          a
+            color: #FFFFFF
+            position: relative
+            padding-bottom: 3px
+            &:hover
+              color: #fff
+              transition: color 0.3s ease
+              &::after
+                width: 100%
+            &::after
+              content: ""
+              position: absolute
+              bottom: 0
+              left: 0
+              width: 0
+              transition: width 0.3s
+              height: 2px
+              background-color: #ffffff
+  .font_size    
+    ul
+      li
+        margin-bottom: 16px
+        font-size: 16px
+        a
+          font-weight: 300
+  .footer_title
+    margin-bottom: 24px
+    font-size: 26px
+    font-weight: 700
+    font-family: $K2D
+  .sub_title
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 18px
+  .sub_text
+    font-weight: 300
+    font-size: 14px
+  .footer_curve
+    position: absolute
+    top: -30px // lift curve above footer
+    left: 0
+    width: 100%
+    overflow: hidden
+    line-height: 0
+    svg
+      display: block
+      width: 100%
+      height: 260px
+  .new_letter_deatils_sec
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 100px 0px 20px 0px
+  .new_letter_form
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    .new_letter_details
+      h3
+        font-weight: 600
+        margin-bottom: 10px
+        font-size: 26px
+        font-family: "K2D", sans-serif
+      p
+        font-weight: 300  
+        font-size: 14px  
+    .subscribe
+      display: flex
+      gap: 16px
+      .primary_btn
+        @include primary_button()
+        background: #006747
+        color: #fff
+        padding: 8px 28px
+        border-radius: 50px
+        border: 1px solid #006747
+        font-size: 16px        
+        &:hover 
+          background: #fff
+          color: #000
+          border: 1px solid #fff
+      .secondary_btn
+        font-size: 16px
+        margin-left: 20px
+        background: transparent
+        color: #fff
+        padding: 10px 18px
+        border-radius: 50px 
+        border: 1px solid #fff
+        margin: 0
+      #email-error
+        font-size: 12px
+        color: red
+
+.copyright
+  p
+    font-size: 14px
+    font-weight: 200
+    float: right
+    a
+      color: #FFFFFF
+      position: relative
+      padding-bottom: 3px
+      font-weight: 500
+      &:hover
+        color: #fff
+        transition: color 0.3s ease
+        &::after
+          width: 100%
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        transition: width 0.3s
+        height: 2px
+        background-color: #ffffff
+
+.healthcare_section
+  padding: 100px 0px 50px 0px
+  .padding
+    padding: 50px 0px
+  .healthcare_content_sec
+    .sub_color
+      color: #0783A4
+    .healthcare_content      
+      .healthcare_title
+        font-weight: 700
+        color: #9B3250
+        font-size: 18px
+        margin-bottom: 10px
+      .healthcare_sub_title
+        font-size: 46px
+        margin-bottom: 0px  
+      .healthcare_text
+        font-size: 16px
+    .healthcare_details
+      padding-top: 30px
+      .sub_title
+        font-size: 20px
+        color: #0783A4
+        margin-bottom: 16px      
+      h5
+        font-weight: 700
+      ul
+        margin-left: 60px
+        li
+          margin-bottom: 3px
+          &::marker
+            font-size: 18px
+      .red_color
+        color: #9B3250
+        margin-bottom: 20px
+        font-size: 18px
+      .ancor_style
+        color: #3A8BD3
+        text-decoration: underline
+      .side_effects_section
+        display: flex
+        gap: 50px        
+        .side_effect_img
+          display: flex
+          flex-direction: column
+          align-items: center
+          gap: 10px
+          text-align: center
+          img
+            width: 90px
+            height: 90px
+
+.contact_us_sec
+  // padding: 60px 0px 0px 0px
+  .contact_us
+    padding: 100px 15px 50px 120px
+    h1
+      font-weight: 500
+    .sub_title
+      font-size: 44px
+      color: #0783A4
+      margin-bottom: 20px
+  .contact_us_details
+    display: flex
+    gap: 10px
+    margin-bottom: 30px
+    .company_details
+      h4
+        font-weight: 500
+        font-size: 22px
+      a
+        color: #202020
+    img
+      width: 40px
+      height: 40px
+  .contact_form
+    padding: 100px 120px 50px 35px
+    background: #0783A4
+    color: #fff
+    h2
+      font-weight: 600
+    .sub_title
+      font-size: 44px
+      color: #fff
+      margin-bottom: 20px
+    .secondary_btn
+      font-size: 16px
+      background: #fff
+      color: #0783A4
+      padding: 12px 24px
+      font-weight: 600
+      border-radius: 50px 
+      border: 1px solid #fff
+      &:hover
+        background: #0783A4
+        color: #fff
+        border: 1px solid #fff
+.lead_form_block
+  .form-group
+    display: flex
+    flex-direction: column
+  label
+    text-align: left
+    &.is-invalid
+      color: #fff
+      text-align: left
+      width: 100%
+      text-transform: math-auto
+      font-size: 14px
+  .form-control
+    &.is-invalid
+      border-color: #fff
+      background-image: none
+    &:focus
+      box-shadow: none
+  .form-control
+    border: 0.1px solid #F5F5F5
+    font-size: 14px
+    height: calc(1.5em + 1.75rem + 2px)
+    background-color: transparent
+    border-radius: 8px
+    color: #fff
+  input::placeholder,
+  textarea::placeholder
+    color: #FFFFFF
+    font-size: 14px
+    font-weight: 200
+  .label_contactus
+    display: flex
+    text-align: left
+  .the-count
+    text-align: end
+    color: #fff
+    span
+      color: #fff !important
+  .phone-input-container
+    display: flex
+    align-items: center
+    border: 0.1px solid #F5F5F5
+    border-radius: 8px
+    select,
+    input
+      background-color: transparent
+      border: none
+      color: white
+      font-size: 14px
+      outline: none
+      padding-left: 4px
+    select
+      padding-right: 5px
+      option
+        color: #000
+    input
+      flex: 1
+    .line
+      hr
+        height: 30px
+        width: 1.5px
+        color: #fff
+        background: #fff
+        margin: 0px 4px 0px 3px
+  .label_contactus
+    font-size: 14px
+    margin-bottom: 5px
+    color: white
+    display: block
+
+
+
+@media (max-width: 767px)
+  .destop_block
+    display: none
+  
+  .mb_display
+    display: block
+  
+  .sticky-top
+    position: unset
+
+  .nav_menu
+    .container-fluid
+      margin: 0px 0px
+    .fixed-top
+      padding: 0px 10px !important
+      // background-color: rgb(251 247 248)
+    .navbar-light .navbar-nav .nav-link
+      padding-left: 6px
+    .navbar-light
+      .navbar-toggler
+        background: transparent
+        border-color: transparent
+        padding: 0px
+
+  .banner_title_section
+    width: 86%
+    transform: translate(5%, -107%)
+    text-align: left
+    left: 0%
+    p
+      font-weight: 200
+    .banner_title
+      font-size: 20px
+      font-weight: 400
+    .banner_text
+      margin: 10px 0px
+      font-weight: 300
+      width: 100%
+    .buy_now_section
+      padding: 10px 0px
+      .primary_btn
+        @include primary_button()
+      .secondary_btn
+        font-size: 16px
+        margin-left: 20px
+        background: transparent
+        color: #fff
+        padding: 12px 24px
+        border-radius: 50px 
+        border: 1px solid #fff
+        &:hover
+          background: #0783A4
+          color: #fff
+          border: 1px solid #0783A4
+
+  .about_section
+    padding: 30px 0px 30px 0px
+    .padding
+      padding: 10px 0px
+    .about_content_sec
+      display: flex
+      align-items: center
+      .about_content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        .about_title
+          font-size: 18px
+        .sub_title
+          font-size: 24px
+          color: #0783A4
+          margin-bottom: 0px
+        .about_text
+          font-size: 16px
+        h5
+          font-weight: 700
+        ul
+          margin-left: 30px
+          li
+            margin-bottom: 3px
+            &::marker
+              font-size: 18px
+              
+    .about_img_sec
+      display: flex
+      justify-content: center
+      gap: 10px
+      align-items: center
+      img
+        width: 48%
+      .sub_title
+          font-size: 24px
+          color: #0783A4
+          margin-bottom: 0px
+    .text_style
+      text-align: left
+      text-align: left !important
+      align-items: flex-start !important
+      margin-top: 20px
+      .mt-24
+        margin-top: 10px !important
+    .how_it_works_img_sec
+      display: flex
+      justify-content: space-between
+      gap: 10px
+      align-items: center
+      img
+        width: 44%
+      .sub_title
+        font-size: 24px
+        color: #0783A4
+        margin-bottom: 0px
+    
+  .faq_section
+    background: #0783A40D
+    padding: 30px 0px
+    .faq_details
+      h3
+        font-size: 24px
+        color: #9B3250
+        margin-bottom: 20px
+        text-align: center
+      .buy_now_section
+        margin: 25px 0px
+      .primary_btn
+        @include primary_button()
+        &:hover
+          color: #000
+          border-color: #000
+    .faq 
+      .hdng
+        a
+          @include faq_style()
+          font-size: 18px
+          padding: 0.4rem 24px 0px 0px
+      .card-header
+        background-color: unset
+        padding: 0.75rem 0px 4px 0px
+        border: 0px
+      .cardf
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.125)
+      .card-body
+        padding: 0px 0px
+        ul
+          margin-left: 30px
+      .border_top
+        border-top: 1.5px solid rgba(0, 0, 0, 0.125)
+
+  .copyright
+    p
+      font-size: 13px
+      font-weight: 200
+      a
+        color: #fff
+        text-decoration: underline
+        &:hover
+          text-decoration: underline
+
+  .healthcare_section
+    padding: 100px 0px 30px 0px
+    .padding
+      padding: 50px 0px
+    .healthcare_content_sec
+      .sub_color
+        color: #0783A4
+      .healthcare_content      
+        .healthcare_title
+          font-weight: 700
+          color: #9B3250
+          font-size: 18px
+          margin-bottom: 10px
+        .healthcare_sub_title
+          font-size: 24px
+          margin-bottom: 0px  
+        .healthcare_text
+          font-size: 16px
+      .healthcare_details
+        padding-top: 10px
+        .sub_title
+          font-size: 20px
+          color: #0783A4
+          margin-bottom: 16px      
+        h5
+          font-weight: 700
+        ul
+          margin-left: 30px
+          li
+            margin-bottom: 3px
+            &::marker
+              font-size: 18px
+        .red_color
+          color: #9B3250
+          margin-bottom: 20px
+          font-size: 18px
+        .ancor_style
+          color: #3A8BD3
+          text-decoration: underline
+        .side_effects_section
+          display: flex
+          gap: 0px    
+          flex-direction: column    
+          .mobile_flex
+            display: flex
+            gap: 30px
+          .side_effect_img
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 10px
+            text-align: center
+            img
+              width: 90px
+              height: 90px
+
+  .footer_Sec
+    .social_icons ul
+      gap: 14px
+    .footer_links
+      display: flex
+      gap: 0px
+      justify-content: unset
+      flex-direction: column
+      ul
+        margin-bottom: 0px
+    .about_dropdown
+      position: relative
+      width: 100%
+
+    .dropdown_btn
+      background-color: transparent
+      color: white
+      padding: 10px 0px
+      font-size: 16px
+      border: none
+      width: 100%
+      text-align: left
+      cursor: pointer
+      display: flex
+      justify-content: space-between
+
+    .dropdown_content
+      display: none
+      background-color: #0783A4
+      width: 100%
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1)
+
+      a
+        color: #fff
+        padding: 5px 15px
+        text-decoration: none
+        display: block
+
+        &:hover
+          background-color: #fff
+          color: #0783a4
+
+    .dropdown_open
+      .dropdown_content
+        display: block
+
+  .contact_us_sec
+    // padding: 60px 0px 0px 0px
+    .contact_us
+      padding: 100px 15px 30px 15px
+      h1
+        font-weight: 500
+      .sub_title
+        font-size: 24px
+        color: #0783A4
+        margin-bottom: 20px
+    .contact_us_details
+      display: flex
+      gap: 10px
+      margin-bottom: 10px
+      .company_details
+        h4
+          font-weight: 500
+          font-size: 18px
+        a
+          color: #202020
+          font-size: 14px
+      img
+        width: 30px
+        height: 30px
+    .contact_form
+      padding: 30px 15px 30px 15px
+      background: #0783A4
+      color: #fff
+      h2
+        font-weight: 600
+      .sub_title
+        font-size: 24px
+        color: #fff
+        margin-bottom: 20px
+      .secondary_btn
+        font-size: 16px
+        background: #fff
+        color: #0783A4
+        padding: 12px 24px
+        font-weight: 600
+        border-radius: 50px 
+        border: 1px solid #fff
+        &:hover
+          background: #0783A4
+          color: #fff
+          border: 1px solid #fff
+//Faq
+// .faq .hdng
+//   a
+//     display: block
+//     position: relative
+//     color: #dc884e
+//     font-size: 18px
+//     text-decoration: none
+//     padding: 0.75rem 1.5rem 0.75rem 1.7rem
+//     font-weight: 600
+//     background: url(../img/plus1.png) no-repeat right 2px center
+//     background-size: 18px
+//   > a[aria-expanded="true"]
+//     background: url(../img/minus1.png) no-repeat right 2px center
+//     background-size: 24px 
+  
+// .fontsizing
+//   font-size: $font16
+//   color: #000 ! important
+//   font-weight: $Bold   ! important
+//   font-family: $Nunito ! important
+//   position: relative
+//   padding-bottom: 5px
+//   text-align: left
+//   margin-left: $font16
+//   &::after
+//     content: ""
+//     position: absolute
+//     bottom: 0
+//     left: 0
+//     width: 0
+//     height: 2px
+//     background-color: #1b1b1b
+//     transition: 0.3s
+//   &:hover::after
+//     width: 100%
+
+// // .for_mobile_slider_section
+//   .backgroundImage
+//     background-image: url("../img/backgrounHome.png")
+//     background-size: cover
+//     height: 100vh
+//     position: relative
+//   .homeContent
+//     margin-left: 80px
+//     button
+//       background-color: $theme-color
+//       border-radius: $font40
+//       font-family: $Nunito
+//       color: $white
+//       padding: 20px
+//       width: 150px
+//       font-weight: bold
+//       border-style: none
+//       &:hover
+//         color: $theme-color
+//         background-color: $white
+//     h1
+//       color: $website-headings
+//       font-family: $RedRose
+//       font-weight: $Bold
+//     p
+//       @include paragaraphs
+//       color: $website-headings
+//     span
+//       color: $theme-color
+//   .mosquito
+//     height: 100px !important
+//     width: 100px !important
+//     position: absolute
+//     right: 208px
+//     top: 169px
+//     z-index: 1
+
+// body
+//   overflow-x: hidden !important
+//   overflow-y: auto !important
+// .accordion
+//   > .card
+//     overflow: hidden
+//     &:not(:last-of-type)
+//       border-bottom: 0
+//       border-bottom-right-radius: 0
+//       border-bottom-left-radius: 0
+//     &:not(:first-of-type)
+//       border-top-left-radius: 0
+//       border-top-right-radius: 0
+//     > .card-header
+//       border-radius: 0
+//       margin-bottom: -1px
+//       background: transparent !important
+// .card-header.borderPurpose.w-100
+//   background-color: transparent !important
+//   padding: 0px  
+//   border-bottom: none !important
+
+// .prd_section
+//   .faq
+//     background-color: $white !important
+//     .hdng a
+//       background-color: $white !important
+//       padding: 16px 0px
+//       border-top: 1px solid #C5C5C5 
+//       color: #000
+//       font-weight: 700
+//       font-size: 20px
+//       font-family: "red rose"
+//       background-size: 24px
+//       &[aria-expanded="true"]
+//         color: $theme-color !important
+//         border-bottom: none 
+//         padding: 20px 0px 16px 0px !important
+//         font-weight: 700
+//     .hdng .first_anchor
+//       background-color: $white !important
+//       padding: 16px 0px
+//     .card-body
+//       padding: 0px 
+//       ul
+//         list-style: none
+
+// .faq_deatils_section
+//   padding: 50px 0px
+//   .faq_deatils
+//     display: flex
+//     justify-content: center
+//   h3
+//     font-family: "red rose"
+//     text-align: center
+//     padding: 0px 0px 30px 0px
+//     font-weight: 800
+//   .faq
+//     background-color: $white !important
+//     .hdng a
+//       background-color: $white !important
+//       padding: 16px 20px
+//       border-bottom: 1px solid #C5C5C5 
+//       color: #000
+//       font-weight: 700
+//       font-size: 18px
+//       background-size: 24px
+//       &[aria-expanded="true"]
+//         color: #fff !important
+//         border-bottom: none
+//         padding: 20px 20px 16px 20px !important
+//         font-weight: 700
+//         background: url(../img/minus1_2.png) no-repeat right 2px center !important
+//         background-size: 25px !important
+//     .hdng .first_anchor
+//       background-color: $white !important
+//       padding: 16px 0px
+//     .card-body
+//       padding: 20px 
+//       ul
+//         list-style: none
+
+// // .border_bottom_custom
+// //   border-bottom: 1px solid #C5C5C5
+
+// // .border_top_custom
+// //   border-top: 0px !important
+
+// .success-page-section
+//   padding: 75px 0
+//   .success-text
+//     text-align: center
+//     h2
+//       font-size: $font30
+//       color: #dc884e
+//       font-weight: $Black
+//     p
+//       font-size: $font18
+//       padding: 8px 0
+//       color: #222d35
+//       font-weight: $Medium
+//     h6
+//       background-color: #ec3726
+//       width: 175px
+//       margin: 0 auto
+//       padding: 15px 0
+//       border-radius: 5px
+//       font-size: $font16
+//       text-align: center
+//       a
+//         color: $white
+//         display: block
+//         &:hover
+//           text-decoration: none
+
+
+// .faq_section
+//   h1
+//     text-align: center
+//     font-family: "Red Rose"
+//     font-weight: 700
+//     color: #131313
+//     font-size: 25px
+
+
+// label#name-error,
+// label#email-error,
+// label#contact-error,
+// label#message-error
+//   color: red
+
+
+// .nav-item.active a,
+// .nav-item a.active
+//   color: $theme-color !important
+
+// .nav-item.dropdown.dropdownstyle.active a
+//   color: #000
+
+
+// .nav-item.dropdown.dropdownstyle .dropdown-item:active
+//   color: #fff !important
+
+// .dropdown-item:active 
+//     background-color: #0783A4
+
+// .nav-item.dropdown.dropdownstyle a  
+//   font-size: $font16
+//   color: #000 !important
+//   font-weight: 700 !important
+//   font-family: "Nunito" !important
+//   margin-left: $font16
+//   position: relative
+//   // padding-bottom: 5px
+//   text-align: left
+//   &:hover
+//     // &::after
+//     //   width: 100%
+
+
+ 
+// // deepthi code
+// body
+//   font-family: "Nunito"
+
+// .for_mobile_menu
+//   .caritero_logo
+//     width: 180px
+
+
+// .banner_title_section
+//   width: 56%
+//   position: absolute
+//   transform: translate(15%, -138%)   
+//   .banner_title
+//     font-family: "Red Rose"
+//     font-size: 46px
+//     color: #000
+//     font-weight: 900
+//     .color
+//       color: #0C6151
+//       font-weight: 900
+//   .banner_text
+//     color: #000
+//     margin: 20px 0px
+//   .buy_now_section
+//     padding: 30px 0px
+//     .primary_btn
+//       background: #0C6151
+//       color: #fff
+//       padding: 18px 36px
+//       border-radius: 50px 
+//       border: 1px solid #0C6151
+//       font-size: 20px
+//       font-weight: 600
+//       &:hover
+//         background: transparent
+//         color: #000
+//         border: 1px solid #000
+//     .secondary_btn
+//       font-weight: 600
+//       font-size: 20px
+//       margin-left: 20px
+//       background: transparent
+//       color: #000
+//       padding: 18px 36px
+//       border-radius: 50px 
+//       border: 1px solid #000
+//       &:hover
+//         background: #0C6151
+//         color: #fff
+//         border: 1px solid #0C6151
+
+// .carousel-indicators
+//   position: absolute
+//   bottom: 12%
+//   left: 8%
+//   display: flex
+//   gap: 2px
+//   list-style: none
+//   padding: 0
+//   margin: 0
+//   right: unset
+//   li
+//     width: 7px
+//     height: 10px
+//     background-image: url('../img/dot_btn.png') // dot for inactive
+//     background-size: contain
+//     background-repeat: no-repeat
+//     background-position: center
+//     opacity: 0.8
+//     cursor: pointer
+//     transition: all 0.3s ease
+//     background-color: unset
+//     &.active
+//       width: 52px
+//       height: 10px
+//       background-image: url('../img/active_btn.png') // dash for active
+//       background-size: contain
+//       background-repeat: no-repeat
+//       background-position: center
+//       opacity: 1
+
+
+// .sales-partners
+//   position: fixed
+//   background: #00000094
+//   top: 38%
+//   display: grid
+//   border-radius: 0px 20px 20px 0px
+//   width: 72px
+//   height: 156px
+//   z-index: 999
+//   backdrop-filter: blur(15.3px)
+
+// .partner-icon
+//   transition: opacity 0.3s ease-in-out
+
+// .partner-link
+//   position: relative
+//   width: 100%
+//   display: flex
+//   align-items: center
+//   padding: 6px 0
+//   text-decoration: none
+
+// .partner-text
+//   position: absolute
+//   left: 100%
+//   top: 50%
+//   transform: translateY(-50%)
+//   margin-left: 10px
+//   background-color: rgba(0, 0, 0, 0.85)
+//   color: #fff
+//   padding: 4px 10px
+//   border-radius: 5px
+//   font-size: 13px
+//   white-space: nowrap
+//   display: none
+//   z-index: 10
+
+// .partner-link:hover .partner-text
+//   display: block
+
+// .partner-text::after
+//   content: ""
+//   position: absolute
+//   top: 50%
+//   right: 100%
+//   transform: translateY(-50%)
+//   border-width: 6px
+//   border-style: solid
+//   border-color: transparent rgba(0, 0, 0, 0.85) transparent transparent
+
+
+// //about
+// .about_section
+//   padding: 100px 0px 50px 0px
+//   .about_content_sec
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     .about_content
+//       .about_title
+//         font-family: "Red Rose" !important
+//         display: flex
+//         align-items: center
+//         gap: 8px
+//         font-weight: 900
+//         img
+//           width: 156px
+//           height: 37px
+//           margin-bottom: 3px  
+//       .about_text
+//         font-size: 18px
+//         margin: 20px 0px 40px 0px
+//       .buy_now_section
+//         .primary_btn
+//           background: #0C6151
+//           color: #fff
+//           padding: 18px 36px
+//           border-radius: 50px 
+//           border: 1px solid #0C6151
+//           font-size: 20px
+//           font-weight: 600
+//           &:hover
+//             background: transparent
+//             color: #000
+//             border: 1px solid #000
+//   .about_img_sec
+//     background: #0C6151
+//     border-radius: 10px
+//     padding: 30px
+//     display: flex
+//     justify-content: center
+//     img
+//       width: 90%
+      
+
+// .products_sec
+//   padding: 0px 0px 50px 0px
+//   position: relative
+//   background: linear-gradient(180deg, #FFE54E 0%, #F8F7F0 100%)
+//   .our_prd_masks_img
+//     width: 16%
+//     position: absolute
+//     top: -28px
+//   .product_content
+//     text-align: center
+//     padding: 70px 0px 50px 0px
+//     .prd_title
+//       font-family: "red rose"
+//       font-weight: 900
+//   .product_deatils_sec
+//     background: #fff
+//     border-radius: 10px
+//     padding: 40px 30px
+//     color: #000
+//     &:hover
+//       background: #0C6151
+//       color: #fff
+//       .readmore_btn
+//         color: #fff        
+//       .product_deatils_sec_link
+//         color: #fff  
+//       .product_text
+//         color: #FFFFFFCC  
+//     .product_deatils_sec_link
+//       color: #000
+//     .prd_img
+//       display: flex
+//       justify-content: center
+//       align-items: center
+//       img
+//         width: 66%
+//     .product_title
+//       font-weight: 700
+//     .product_text      
+//     .readmore_btn
+//       color: #0C6151 
+//       font-size: 18px
+//       font-weight: 600
+//       i
+//       font-size: 18px
+        
+
+// .new_letter_sec
+//   padding: 50px 0px
+//   background-color: #F8F7F0
+//   .new_letter_deatils_sec
+//     display: flex
+//     align-items: flex-end
+//   .new_letter_details
+//     h3
+//       font-family: "Red Rose"
+//       color: #0C6151
+//       font-weight: 700
+//       font-size: 26px
+//       font-size: 30px
+//       display: flex
+//       align-items: center
+//       gap: 4px
+//       img
+//         width: 156px
+//         height: 37px
+//         margin-bottom: 3px
+//     p
+//   .new_letter_form
+//     input.form-control
+//       border-top: none
+//       border-right: none
+//       border-left: none
+//       border-bottom: 1px solid black
+//       outline: none
+//       border-radius: 0
+//       background-color: transparent
+//       padding: 10px 10px 10px 0
+//       // background-image: url(../img/right-arrows.png)
+//       // background-repeat: no-repeat
+//       // background-position: right center
+//       // background-size: 25px
+//       position: relative
+//       font-size: 22px
+//       color: #000000
+//       &:focus
+//         box-shadow: none
+//       &::placeholder
+//         color: #000
+//         font-size: 20px
+//     .form-group
+//       margin-bottom: 10px !important
+//       margin-left: 50px
+//     .newsletter_submit_button
+//       background-image: url(../img/right-arrows.webp) !important
+//       background-repeat: no-repeat !important
+//       background-position: right center !important
+//       background-size: 25px
+//       width: 30px
+//       height: 30px
+//       color: transparent !important
+//       border: none
+//       position: absolute
+//       top: 10px
+//       right: 16px
+//       background-color: transparent
+//       &:hover
+//         color: transparent !important
+//         outline: none !important
+
+
+// .footer_Sec
+//   background: #24231D
+//   color: #fff
+//   padding: 50px 0px 0px 0px
+//   h6
+//     font-weight: 300    
+//     span
+//       font-weight: 900 !important
+//   .footer_details
+//     p
+//       margin: 4px 0px 14px 0px
+//     img
+//       width: 250px
+//   .footer_links
+//     ul
+//       li
+//         list-style: none
+//         margin-bottom: 0px !important
+//         a
+//           color: $white 
+//           font-weight: 600
+//           margin-top: 5px !important
+//           position: relative
+//           padding-bottom: 3px
+//           line-height: 2
+//           &::after
+//             content: ""
+//             position: absolute
+//             bottom: 0
+//             left: 0
+//             width: 0
+//             transition: width 0.3s
+//             height: 2px
+//             background-color: $white
+//           &:hover::after
+//             width: 100%      
+//   .social_icons
+//     li
+//       list-style: none
+//       padding: 4px 0px
+//     a
+//       color: #fff
+//       display: flex
+//       align-items: center
+//       position: relative
+//       gap: 12px
+//       &::after
+//         content: ""
+//         position: absolute
+//         bottom: 0
+//         left: 40px
+//         width: 0
+//         transition: width .3s
+//         height: 2px
+//         background-color: #fff
+//       &:hover
+//         &::after
+//           width: 50%
+//         i
+//           background: #0c6151
+//       i
+//         width: 30px
+//         font-size: 12px
+//         height: 30px
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         background: #FFFFFF1F
+//         color: #fff
+//         border-radius: 30px
+//   .copyright
+//     p
+//       font-size: 12px
+//       font-weight: 200
+//       a
+//         color: #fff
+//         font-weight: 700
+//         &:hover
+//           text-decoration: underline
+
+
+
+// .about_details_section
+//   padding: 120px 0px 50px 0px
+//   .about_details_img_sec
+//     img
+//       border-radius: 10px
+//   .about_content_sec
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     .about_content
+//       .about_title
+//         font-family: "Red Rose" !important
+//         display: flex
+//         align-items: center
+//         gap: 8px
+//         font-weight: 900
+//         color: #0C6151
+//         img
+//           width: 156px
+//           height: 37px
+//           margin-bottom: 3px  
+//       .about_text
+//         font-size: 18px
+
+// .key_benifits_section
+//   background: #F8F7F0
+//   padding: 50px 0px 50px 0px
+//   .key_benifits_content_sec
+//     .benifits_sec
+//         display: flex
+//         gap: 14px
+//         align-items: center
+//         img
+//           width: 18%
+//           height: 18%
+//           background: #fff
+//           padding: 12px
+//           border-radius: 50%
+//         .benifits_details_sec
+//           h5
+//             font-weight: 700
+//           p
+//             font-size: 15px
+//     .key_benifits_content      
+//       .key_benifits_title
+//         font-family: "Red Rose" !important
+//         display: flex
+//         align-items: center
+//         gap: 8px
+//         font-weight: 900
+//         padding-bottom: 30px
+//         img
+//           width: 156px
+//           height: 37px
+//           margin-bottom: 3px  
+//       .key_benifits_text
+//         font-size: 18px
+//   .key_benifits_img_sec
+//     position: relative
+//     background: #222220
+//     z-index: 999
+//     padding: 178px 50px 130px 50px
+//     border-radius: 10px
+//     .right_leaf
+//       position: absolute
+//       width: 38%
+//       right: 0
+//       top: 0
+//       z-index: -1
+
+// .our_company_sec
+//   background: #0C6151
+//   color: #fff
+//   padding: 50px 0px
+//   text-align: center
+//   .our_company_details
+//     padding-bottom: 50px
+//     p
+//       font-weight: 200
+//       font-size: 18px
+//   .our_company_title
+//     font-family: Red Rose
+//     font-weight: 800
+//   .our_vision_title
+//     font-family: Red Rose
+//     font-weight: 800
+//   .our_vision_text
+//     padding: 0px 20px 0px 0px
+//     font-weight: 200
+//     font-size: 18px
+//   .our_mission_title
+//     font-family: Red Rose
+//     font-weight: 800
+//   .our_mission_text
+//     padding: 0px 0px 0px 20px
+//     font-weight: 200
+//     font-size: 18px
+
+
+// .comparision_Sec
+//   padding: 50px 0px
+//   .comparison_text
+//     margin-top: 20px
+//   .comparision_title
+//     font-family: "Red Rose" !important
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     gap: 8px
+//     font-weight: 800
+//     padding-bottom: 10px
+//     img
+//       width: 156px
+//       height: 37px
+//       margin-bottom: 3px  
+//   table
+//     width: 100%
+//     border-collapse: separate
+//     border-spacing: 0
+//     // overflow: hidden
+//     th
+//       background: #000
+//       color: #fff
+//       text-align: center
+//       padding: 20px
+//       font-size: 20px
+//       font-weight: 500
+//       font-family: "Orelega One"
+
+//       &:first-child
+//         border-top-left-radius: 10px
+
+//       &:last-child
+//         border-top-right-radius: 10px
+//     td
+//       vertical-align: top
+//       padding: 16px 30px
+//       border-right: 1px solid #00000047
+
+//       &:first-child
+//         border-left: 1px solid #00000047
+//     tbody
+//       tr:last-child
+//         border-bottom: 1px solid #00000047
+
+//         td
+//           border-bottom: 1px solid #00000047
+
+//           &:first-child
+//             border-bottom-left-radius: 15px
+
+//           &:last-child
+//             border-bottom-right-radius: 15px
+//   .others_sec
+//     display: flex
+//     gap: 16px
+//     img
+//       width: 60px
+//       height: 60px
+//     .others_details_sec
+//       h5
+//         font-weight: 700
+//         margin-bottom: 4px
+//         font-size: 18px
+//       p
+//         color: #3F3F3F
+
+
+// .our_research_section
+//   padding: 100px 0px 50px 0px
+//   .about_details_img_sec
+//     img
+//       border-radius: 10px
+//   .research_title_sec
+//     .research_title
+//       font-family: "Red Rose"
+//       font-weight: 900
+//       color: #0C6151
+//       text-align: center
+//       padding: 50px 0px 30px 0px
+//   .our_research_sec
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     img
+//       border-radius: 10px
+//     .our_research_content
+//       ul
+//         padding-left: 30px
+//         margin-top: 30px
+//         font-size: 18px
+//       .our_research_title
+//         font-family: "Red Rose" !important
+//         display: flex
+//         align-items: center
+//         gap: 8px
+//         font-weight: 900
+//       .our_research_text
+//         font-size: 18px
+
+
+// .botanical_des_section
+//   background: #F8F7F0
+//   padding: 50px 0px 50px 0px
+//   .botanical_des_img_sec
+//     img
+//       border-radius: 10px
+//   .botanical_des_content_sec    
+//     padding-left: 50px
+//     .botanical_des_content      
+//       .botanical_des_title
+//         font-family: "Red Rose" 
+//         font-weight: 800
+//       .botanical_text
+//         margin-top: 18px
+//         font-size: 18px
+//   .nutritional_sec
+//     padding: 50px 0px
+//     .botanical_des_img_sec
+//       img
+//         border-radius: 10px
+//     .nutritional_des_content_sec    
+//       padding-right: 30px
+//       .nutritional_des_content      
+//         .nutritional_des_title
+//           font-family: "Red Rose" 
+//           font-weight: 800
+//         .nutritional_text
+//           margin-top: 8px
+//           margin-bottom: 4px
+//           font-size: 18px
+//         ul
+//           padding-left: 30px
+//           font-size: 18px
+//   .medical_sec
+//     padding: 50px 0px
+//     .medical_des_img_sec
+//       img
+//         border-radius: 10px
+//     .medical_des_content_sec    
+//       padding-left: 50px
+//       .medical_des_content      
+//         .medical_des_title
+//           font-family: "Red Rose" 
+//           font-weight: 800
+//         .medical_text
+//           margin-top: 10px
+//           margin-bottom: 8px
+//           font-size: 18px
+//         ul
+//           padding-left: 30px
+//           font-size: 18px
+      
+// .carica_dengue_section
+//   padding: 50px 0px 50px 0px
+//   .carica_dengue_img_sec
+//     img
+//       border-radius: 10px
+//   .carica_dengue_title_sec
+//     padding-bottom: 30px
+//     text-align: center    
+//     .carica_dengue_title
+//       font-family: "red rose"
+//       font-weight: 900
+//     p
+//       font-size: 18px
+//   .carica_dengue_sec
+//     .carica_dengue_content
+//       .carica_dengue_sub_title
+//         font-weight: 700
+//       .carica_dengue_text
+//         font-size: 18px
+//       ul
+//         padding-left: 30px
+//         font-size: 18px 
+
+
+// .culinary_uses_sec
+//   background: #F8F7F0
+//   padding: 50px 0px
+//   .culinary_uses_details
+//     .culinary_uses_title
+//       font-weight: 700
+//     h5
+//       font-weight: 700
+//     ul
+//       padding: 10px 0px 20px 30px
+//       font-size: 18px
+//   .precations_sec
+//     img
+//       width: 120px
+//       height: 120px
+//       margin-bottom: 20px
+//       border-radius: 50%
+//   h5
+//     font-weight: 700
+//     font-size: 18px
+//   p
+//     font-size: 18px
+//   .conclusion_details
+//     padding: 30px 0px 0px 0px
+//     .conclusion_title
+//       font-weight: 700
+
+
+// .diagnosis_uses_sec
+//   background: #F8F7F0
+//   padding: 50px 0px
+//   .culinary_uses_details
+//     .culinary_uses_title
+//       font-weight: 700
+//     h5
+//       font-weight: 700
+//       padding-top: 10px
+//     ul
+//       padding: 10px 0px 20px 30px
+//       font-size: 18px
+//   .precations_sec
+//     img
+//       width: 25%
+//       margin-bottom: 20px
+//   h5
+//     font-weight: 700
+//     font-size: 18px
+//   p
+//     font-size: 18px
+//   .conclusion_details
+//     padding: 30px 0px 0px 0px
+//     .conclusion_title
+//       font-weight: 700
+
+// .conclusion_section
+//   padding: 50px 0px
+//   .conclusion_details
+//     h5
+//       font-weight: 700
+//       font-size: 18px
+//     ul
+//       padding: 6px 0px 0px 30px
+//       font-size: 18px
+
+
+// .dengue_sec
+//   padding: 50px 0px
+//   .dengue_details
+//     .dengue_title
+//       font-weight: 700 
+//     ul
+//       padding-left: 30px
+//       margin-top: 30px   
+//       margin-bottom: 0px
+//       font-size: 18px
+//   h5
+//     font-weight: 700
+//     font-size: 18px
+//   p
+//     font-size: 18px
+//   .dengue_img_details
+//     display: flex
+//     justify-content: center
+//     gap: 20px
+//     padding: 20px 15px
+//     .dengue_details
+//       display: flex
+//       align-items: center
+//       flex-direction: column
+//       text-align: center
+//       gap: 10px      
+//       width: 100%
+//       img
+//         width: 110px
+//         border-radius: 50%
+//       h5
+//         // padding: 0px 20px
+//         span
+//           font-size: 12px
+//           font-weight: 900
+      
+
+// // product_section
+// .prd_section
+//   padding: 150px 0px 50px 0px
+//   .prd_content_sec
+//     padding-left: 30px
+//     .prd_content
+//       .prd_title
+//         display: flex
+//         align-items: center
+//         gap: 8px
+//         font-weight: 900
+//         img
+//           width: 180px
+//           // height: 46px
+//           margin-bottom: 6px  
+//       .prd_text
+//         // font-size: 18px
+//         // margin: 20px 0px 40px 0px
+//       .buy_now_section
+//         padding: 20px 0px 50px 0px
+//         .primary_btn
+//           background: #0C6151
+//           color: #fff
+//           padding: 18px 36px
+//           border-radius: 50px 
+//           border: 1px solid #0C6151
+//           font-size: 18px
+//           font-weight: 600
+//           &:hover
+//             background: transparent
+//             color: #000
+//             border: 1px solid #000
+//   .prd_img_sec.sticky-top
+//     top: 100px
+//     img
+//       width: 94%
+
+
+// .testimonals_section
+//   background: #F8F7F0
+//   padding: 50px 0px
+//   h3
+//     font-family: "red rose"
+//     text-align: center
+//     padding: 10px 0px 30px 0px
+//     font-weight: 800
+//   .owl-buttons 
+//     display: none
+//   .owl-theme .owl-controls .owl-page.active span
+//     width: 56px
+//   .owl-theme .owl-controls .owl-page span
+//     height: 8px
+//     width: 8px
+//     background: #000000 !important
+//     opacity: unset !important
+//     margin: 5px 4px !important
+//   .post
+//     margin: 0px 8px
+//     padding: 0px 10px
+//     .card
+//       min-height: 228px
+//       border: 0px !important
+//       padding: 20px 16px
+//       border-radius: 14px
+//       .cardEndingName
+//         display: flex
+//         gap: 10px
+//         padding-bottom: 20px
+//         .greenCircle
+//           width: 50px
+//           height: 50px
+//           display: flex
+//           align-items: center
+//           justify-content: center
+//           border-radius: 30px
+//           color: #fff
+//           background: #0C6151
+//       .review_details
+//         p
+//           margin: 0px
+//           font-weight: 700
+//         span
+//           font-size: 13px
+//           font-weight: 600
+//       .stars
+//         margin-bottom: 6px
+//         i
+//           color: #FFC107
+//           font-size: 20px
+//           font-weight: 600
+
+// .blog_section
+//   padding: 120px 0px 50px 0px
+//   a
+//     color: #000
+//     &:hover
+//       .read_more
+//         color: #000
+//   h6
+//     font-size: 18px
+//     font-weight: 700
+//   .blog_title
+//     color: #0C6151
+//     font-weight: 800
+//     font-family: "red rose"
+//     text-align: center
+//   .blog_text
+//     text-align: center
+//     padding-bottom: 30px
+//   .blog_img
+//     height: 200px
+//     border-top-left-radius: 10px
+//     border-top-right-radius: 10px
+//   .calender_setting
+//     display: flex
+//     gap: 6px
+//     align-items: center
+//     padding-bottom: 10px
+//     p
+//       margin: 0
+//       font-size: 14px
+//       font-weight: 500
+//     img
+//       width: 20px      
+//   .blog_sub_title
+//     color: #000
+//     padding: 0px 0px 8px 0px 
+//   .read_more
+//     color: #0C6151
+//     font-size: 18px
+//     font-weight: 700
+
+
+// .moreblog_section
+//   padding: 50px 0px 50px 0px
+//   a
+//     color: #000
+//     &:hover
+//       .read_more
+//         color: #000
+//   h6
+//     font-size: 18px
+//     font-weight: 700
+//   .blog_title
+//     color: #0C6151
+//     font-weight: 800
+//     font-family: "red rose"
+//     text-align: center
+//     padding-bottom: 30px
+//   #blog_slider
+//   .owl-buttons
+//     display: none
+//   .owl-theme .owl-controls .owl-page.active span
+//     width: 56px
+//   .owl-theme .owl-controls .owl-page span
+//     height: 8px
+//     width: 8px
+//     background: #000000 !important
+//     opacity: unset !important
+//     margin: 5px 4px !important
+//   .post
+//     padding: 0px 10px
+//   .blog_img
+//     height: 200px
+//     border-top-left-radius: 10px
+//     border-top-right-radius: 10px
+//   .calender_setting
+//     display: flex
+//     gap: 6px
+//     align-items: center
+//     padding-bottom: 10px
+//     p
+//       margin: 0
+//       font-size: 14px
+//       font-weight: 500
+//     img
+//       width: 20px      
+//   .blog_sub_title
+//     color: #000
+//     padding: 0px 0px 8px 0px 
+//   .read_more
+//     color: #0C6151
+//     font-size: 18px
+//     font-weight: 700
+
+
+// .blog_detail_sec
+//   padding: 100px 0px 50px 0px
+//   h4
+//     font-weight: 700
+//   h1
+//     font-size: 32px
+//     font-weight: 700
+//   h2
+//     font-size: 26px
+//     font-weight: 700
+//     strong
+//       font-weight: 700
+//   h3
+//     font-size: 20px
+//   .blog_title
+//     font-size: 28px !important
+//   .calender_setting
+//     display: flex
+//     gap: 8px
+//     align-items: center
+//     padding-bottom: 10px
+//     padding-top: 14px
+//     p
+//       margin: 0
+//       font-size: 14px
+//       font-weight: 700
+//     img
+//       width: 20px
+//   .blog_inner_home
+//     .bloginner_text
+//       padding: 0px !important
+//   .sticky-top
+//     top: 112px
+//   ul.nav.nav-pills.flex-column.right_column
+//     li
+//       a
+//         color: #000
+//   .ctn
+//     position: absolute
+//     margin-top: -80px
+//   .table_content
+//     a
+//       color: #000
+//       &:hover
+//         color: #0a614d
+//         text-decoration: none
+//   .blog_anchor
+//     color: #0a614d
+//     &:hover
+//       color: #0a614d
+//   table,
+//   th,
+//   td
+//     border: 1px solid black
+//     border-collapse: collapse
+//     padding: 10px
+//     text-align: center
+//     margin-bottom: 50px
+// .blog_progress_container
+//   width: 100%
+//   height: 4px
+//   background: #e0e0e0
+//   position: fixed
+//   top: 61px
+//   left: 0
+//   z-index: 999
+// .blog_progress_bar
+//   height: 100%
+//   background: #0C6151
+//   width: 0%
+
+
+// .contact_us_sec
+//   padding: 120px 0px 50px 0px
+//   .contact_us_details
+//     display: flex
+//     justify-content: center
+//   .w-50
+//     width: 58% !important
+//     padding-bottom: 10px
+//   .leadForm
+//     display: flex
+//     justify-content: center
+//   .w-96
+//     width: 96%
+//   h3
+//     color: #0C6151
+//     font-weight: 800
+//     font-family: "red rose"
+//     text-align: center
+//   p
+//     text-align: center
+//   .form-control
+//     border: 0px
+//     border-bottom: 1px solid #686868
+//     border-radius: 0px
+//     padding: 0px
+//     font-size: 22px
+//     font-weight: 500
+//     color: #000000
+//     &:focus
+//       box-shadow: unset
+//       color: #000000 !important
+//   .text-red
+//     color: red !important
+//   .label_contactus
+//     color: #686868
+//     font-size: 14px
+//     margin: 0px
+//     font-weight: 600
+//   .form_submit
+//     display: flex
+//     justify-content: center
+//   .primary_btn
+//       background: #0C6151
+//       color: #fff
+//       padding: 18px 36px
+//       border-radius: 50px 
+//       border: 1px solid #0C6151
+//       font-size: 18px
+//       font-weight: 600
+//       &:hover
+//         background: transparent
+//         color: #000
+//         border: 1px solid #000
+
+// .contact_us_get_in_touch
+//   background-color: #F3F3F3
+//   width: 100%
+//   h3
+//     font-family: "Nunito"
+//     font-weight: 700
+//   p
+//     font-family: "Nunito"
+//     font-weight: 400
+//     color: #222222
+
+//   .contact-item_caritero
+//     display: flex
+//     flex-direction: row
+//     justify-content: flex-start
+//     align-items: flex-start
+//     img
+//       margin-right: 10px
+//       height: 20px
+//       width: 20px
+//       margin-top: 5px
+//     a
+//       font-family: "Nunito"
+//       color: #000000
+//       font-weight: 500
+//       margin-top: 5px
+
+
+// .mb_img
+//   display: none
+
+// //Responsive Media Quaries Section
+// //large screen
+// @media (max-width:1199px)
+//     //.container
+//         //width: 950px
+
+// //tablet view
+// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+//   //.container
+//     //width: 950px
+
+// //responsive styles for laptop
+// @media (max-width:1199px)
+//   .container
+//     width: 950px
+
+// //responsive styles for tablet/ipad
+// @media (max-width:979px)
+//   .container
+//     width: 750px
+
+// //responsive styles for mobile
+// @media (max-width:767px)
+//   .container
+//     width: 100%
+
+// // @mixin border-radius($radius)
+// // 	border-radius: $radius
+// // 	-webkit-border-radius: $radius
+// // 	-moz-border-radius: $radius
+// //   -ms-border-radius: $radius
+
+
+
+// // custom to sass styles
+// @media (min-width: 769px)
+//   // .sellingpartner
+//   //   width: max-content
+//   //   position: fixed
+//   //   top: 50%
+//   //   left: 0
+//   //   z-index: 999
+//   //   transform: translate(0px, -50%)
+
+// @media (max-width: 767px)
+//   .mb_img
+//     display: block
+
+//   .destop_img
+//     display: none
+
+//   .for_mobile_menu
+//     .dropdown-menu 
+//       position: static !important
+//       z-index: 1050 !important
+
+//   .caritero_logo
+//     margin-left: 0px
+//     width: 160px
+
+//   .navbar
+//     padding: 10px
+
+//   .contact_us_sec
+//     padding: 90px 0px 30px 0px
+//     .mbpadding
+//       padding: 0px
+//     .contact_us_details
+//     .w-50
+//       width: 100% !important
+//       padding-bottom: 10px
+//     .leadForm
+//     .w-96
+//       width: 100%
+//     h3
+//     p
+//     .form-control      
+//     .text-red
+//     .label_contactus
+//     .form_submit
+//     .primary_btn
+//         background: #0C6151
+//         color: #fff
+//         padding: 18px 36px
+//         border-radius: 50px 
+//         border: 1px solid #0C6151
+//         font-size: 18px
+//         font-weight: 600
+//         &:hover
+//           background: transparent
+//           color: #000
+//           border: 1px solid #000
+  
+//   .new_letter_sec
+//     padding: 30px 0px
+//     .new_letter_deatils_sec
+//     .new_letter_details
+//       h3
+//         font-size: 30px
+//         display: block
+//         img
+//           width: 156px
+//           height: 37px
+//           margin-bottom: 3px
+//       p
+//     .new_letter_form
+//       .form-group
+//         margin-bottom: 0px !important
+//         margin-left: 0px
+//       .newsletter_submit_button
+        
+//   .footer_Sec
+//     padding: 30px 0px 0px 0px
+//     h6
+//       font-weight: 300
+//     .footer_details
+//       p
+//         margin: 4px 0px 14px 0px
+//       img
+//         width: 250px
+//     .footer_links.pl-50
+//         padding-left: 15px !important
+//     .footer_links   
+//       display: none   
+//       ul
+//         li
+//           a                
+//     .social_icons
+//       ul
+//         display: flex
+//         gap: 9px
+//       li
+//       a        
+//         i          
+//     .copyright
+//       p      
+//         text-align: center  
+//         a        
+//           display: block  
+
+//   .blog_section
+//     padding: 90px 0px 0px 0px
+//     a
+//     h6
+//     .blog_title
+//     .blog_text
+//       padding-bottom: 10px
+//     .blog_img
+//     .calender_setting
+//       p
+//       img   
+//     .blog_sub_title
+//     .read_more
+        
+//   .blog_detail_sec
+//     padding: 90px 0px 30px 0px
+//     .table_content
+//       display: none
+//     .bolg_inner_page_banner
+//       padding-bottom: 24px !important
+//     h4
+//     h1
+//     h2
+//       strong
+//     h3
+//     .blog_title
+//     .calender_setting
+//       p
+//       img
+
+//   .moreblog_section
+//     padding: 10px 0px 30px 0px
+//     a
+//     h6
+//     .blog_title
+//       padding-bottom: 10px
+//     .blog_img
+//     .calender_setting
+//       p
+//       img 
+//     .blog_sub_title
+//     .read_more
+
+
+//   .our_research_section
+//     padding: 90px 0px 30px 0px
+//     .mb_flex
+//       display: flex
+//       flex-direction: column-reverse
+//     .research_title_sec
+//       .research_title
+//         padding: 0px 0px 20px 0px
+//     .our_research_sec
+//       img
+//       .our_research_content
+//         padding-top: 20px
+//         ul
+//           padding-left: 30px
+//           margin-top: 20px
+//           font-size: 18px
+//         .our_research_title
+//         .our_research_text
+
+
+//   .botanical_des_section
+//     padding: 50px 0px 0px 0px
+//     .botanical_des_content_sec    
+//       padding-left: 15px
+//       .botanical_des_content      
+//         .botanical_des_title
+//           padding-top: 20px
+//         .botanical_text
+//     .nutritional_sec
+//       padding: 30px 0px
+//       display: flex
+//       flex-direction: column-reverse
+//       .nutritional_des_content_sec    
+//         padding-right: 15px
+//         .nutritional_des_content      
+//           .nutritional_des_title
+//           .nutritional_text
+//           ul
+//             padding-left: 30px
+//     .medical_sec
+//       padding: 0px 0px 30px 0px
+//       .medical_des_content_sec    
+//         padding-left: 15px
+//         .medical_des_content      
+//           .medical_des_title
+//             padding-top: 20px
+//           .medical_text
+//           ul
+//             padding-left: 30px
+        
+//   .carica_dengue_section
+//     padding: 30px 0px
+//     .mb_flex
+//       display: flex
+//       flex-direction: column-reverse
+//     .carica_dengue_title_sec
+//       padding-bottom: 10px
+//       text-align: unset    
+//       .carica_dengue_title
+//       p
+//     .carica_dengue_sec
+//       .carica_dengue_content
+//         .carica_dengue_sub_title
+//           padding-top: 20px
+//         .carica_dengue_text
+//         ul
+//           padding-left: 30px
+
+
+//   .culinary_uses_sec
+//     padding: 30px 0px
+//     .pl-40
+//       padding-left: 0px !important 
+//     .culinary_uses_details
+//       .culinary_uses_title
+//         font-weight: 700
+//       h5
+//         font-weight: 700
+//       ul
+//         padding: 10px 0px 20px 30px
+//     .precations_sec
+//       img
+//     h5
+//     p
+//     .conclusion_details
+//       padding: 30px 0px 0px 0px
+//       .conclusion_title
+
+
+//   .diagnosis_uses_sec
+//     padding: 30px 0px
+//     .mb_padding
+//       padding-top: 20px !important
+//     .culinary_uses_details
+//       .culinary_uses_title
+//       h5
+//         padding-top: 10px
+//       ul
+//         padding: 10px 0px 0px 30px
+//     .precations_sec
+//       img
+//         margin-bottom: 20px
+//     h5
+//       font-weight: 700
+//       font-size: 18px
+//     p
+//       font-size: 18px
+//     .conclusion_details
+//       padding: 30px 0px 0px 0px
+//       .conclusion_title
+
+//   .conclusion_section
+//     padding: 30px 0px
+//     .conclusion_details
+//       h5
+//         font-weight: 700
+//         font-size: 18px
+//       ul
+//         padding: 6px 0px 0px 30px
+//         font-size: 18px
+
+
+//   .dengue_sec
+//     padding: 30px 0px
+//     .mb_padding
+//       padding: 0px !important
+//     .dengue_details
+//       .dengue_title
+//         font-weight: 700 
+//       ul
+//         padding-left: 30px
+//         margin-top: 30px   
+//         margin-bottom: 0px
+//         font-size: 18px
+//     h5
+//       font-weight: 700
+//       font-size: 18px
+//       br
+//         display: none
+//     p
+//       font-size: 18px
+//     .dengue_img_details
+//       display: flex
+//       justify-content: center
+//       flex-direction: column-reverse
+//       gap: 20px
+//       padding: 20px 15px
+//       .dengue_details
+//         display: flex
+//         align-items: center
+//         flex-direction: column
+//         text-align: center
+//         gap: 10px      
+//         width: 100%
+//         img
+//           width: 100px
+//         h5
+//           // padding: 0px 20px
+//           span
+//             font-size: 12px
+//             font-weight: 900
+
+
+//   .prd_section
+//     padding: 90px 0px 30px 0px
+//     .prd_content_sec
+//       padding-left: 15px
+//       .prd_content
+//         .prd_title
+//           display: block
+//           img
+//             width: 180px
+//             margin-bottom: 6px  
+//         .prd_text
+//         .buy_now_section
+//           padding: 0px 0px 40px 0px
+//           display: flex
+//           justify-content: center
+//           .primary_btn
+//     .prd_img_sec.sticky-top
+//       top: 100px
+//       img
+//         width: 100%
+
+
+//   .testimonals_section
+//     padding: 30px 0px
+//     h3
+//       padding: 0px 0px 20px 0px
+//       font-weight: 800
+//     .owl-buttons 
+//       display: none
+//     .owl-theme .owl-controls .owl-page.active span
+//       width: 56px
+//     .owl-theme .owl-controls .owl-page span
+//       height: 8px
+//       width: 8px
+//       background: #000000 !important
+//       opacity: unset !important
+//       margin: 5px 4px !important
+//     .post
+//       margin: 0px 8px
+//       .card
+//         min-height: 228px
+//         border: 0px !important
+//         padding: 20px 16px
+//         border-radius: 14px
+//         .cardEndingName
+//           display: flex
+//           gap: 10px
+//           padding-bottom: 20px
+//           .greenCircle
+//             width: 50px
+//             height: 50px
+//             display: flex
+//             align-items: center
+//             justify-content: center
+//             border-radius: 30px
+//             color: #fff
+//             background: #0C6151
+//         .review_details
+//           p
+//             margin: 0px
+//             font-weight: 700
+//           span
+//             font-size: 13px
+//             font-weight: 600
+//         .stars
+//           margin-bottom: 6px
+//           i
+//             color: #FFC107
+//             font-size: 20px
+//             font-weight: 600
+
+//   .faq_deatils_section
+//     padding: 30px 0px
+//     .faq_deatils
+//       display: flex
+//       justify-content: center
+//     h3
+//       padding: 0px 0px 20px 0px
+//       font-weight: 800
+//     .faq
+//       background-color: $white !important
+//       .hdng a
+//         background-color: $white !important
+//         padding: 16px 28px 16px 10px
+//         border-top: 1px solid #C5C5C5 
+//         color: #000
+//         font-weight: 700
+//         font-size: 18px
+//         background-size: 24px
+//         &[aria-expanded="true"]
+//           color: #fff !important
+//           border-bottom: none
+//           padding: 16px 28px 16px 10px !important
+//           font-weight: 700     
+//       .hdng .first_anchor
+//         background-color: $white !important
+//         padding: 16px 0px
+//       .card-body
+//         padding: 20px 
+//         ul
+//           list-style: none
+
+//   .about_details_section
+//     padding: 90px 0px 30px 0px
+//     .about_content_sec
+//       display: flex
+//       justify-content: center
+//       align-items: center
+//       .about_content
+//         .about_title
+//           justify-content: center
+//           img
+//             width: 156px
+//             height: 37px
+//             margin-bottom: 3px  
+//         .about_text
+//           font-size: 18px
+//           text-align: center
+
+//   .key_benifits_section
+//     background: #F8F7F0
+//     padding: 30px 0px 
+//     .key_benifits_content_sec
+//       .benifits_sec
+//           display: flex
+//           gap: 14px
+//           align-items: center
+//           flex-direction: column
+//           text-align: center
+//           img
+//             width: 30%
+//             height: 30%
+//           .benifits_details_sec
+//             h5
+//               font-weight: 700
+//             p
+//               font-size: 15px
+//       .key_benifits_content      
+//         text-align: center
+//         padding-bottom: 10px
+//         .key_benifits_title
+//           font-family: "Red Rose" !important
+//           display: unset
+//           align-items: center
+//           gap: 8px
+//           font-weight: 900
+//           padding-bottom: 30px
+//           img
+//             width: 156px
+//             height: 37px
+//             margin-bottom: 3px  
+//         .key_benifits_text
+//           font-size: 18px
+//     .key_benifits_img_sec
+//       position: relative
+//       background: #222220
+//       z-index: 999
+//       padding: 110px 50px 50px 50px
+//       border-radius: 10px
+//       .right_leaf
+//         position: absolute
+//         width: 34%
+//         right: 0
+//         top: 0
+//         z-index: -1
+
+//   .our_company_sec
+//     padding: 30px 0px
+//     text-align: center
+//     .our_company_details
+//       padding-bottom: 10px
+//       p
+//         font-weight: 200
+//         font-size: 18px
+//     .our_company_title
+//       font-family: Red Rose
+//       font-weight: 800
+//     .our_vision_title
+//       font-family: Red Rose
+//       font-weight: 800
+//     .our_vision_text
+//       padding: 0px 20px 0px 0px
+//       font-weight: 200
+//       font-size: 18px
+//     .our_mission_title
+//       font-family: Red Rose
+//       font-weight: 800
+//     .our_mission_text
+//       padding: 0px 0px 0px 20px
+//       font-weight: 200
+//       font-size: 18px
+
+
+//   .comparision_Sec
+//     padding: 30px 0px
+//     overflow: auto
+//     .comparison_text
+//       text-align: center
+//     table
+//       width: 100%
+//       border-collapse: separate
+//       border-spacing: 0
+//       // overflow: hidden
+//       th
+//         background: #000
+//         color: #fff
+//         text-align: center
+//         padding: 20px 10px
+//         font-size: 20px
+//         font-weight: 500
+//         font-family: "Orelega One"
+
+//         &:first-child
+//           border-top-left-radius: 10px
+
+//         &:last-child
+//           border-top-right-radius: 10px
+//       td
+//         vertical-align: top
+//         padding: 16px 10px
+//         border-right: 1px solid #00000047
+
+//         &:first-child
+//           border-left: 1px solid #00000047
+//       tbody
+//         tr:last-child
+//           border-bottom: 1px solid #00000047
+
+//           td
+//             border-bottom: 1px solid #00000047
+
+//             &:first-child
+//               border-bottom-left-radius: 15px
+
+//             &:last-child
+//               border-bottom-right-radius: 15px
+//     .others_sec
+//       display: flex
+//       gap: 16px
+//       flex-direction: column
+//       align-items: center
+//       text-align: center
+//       img
+//         width: 60px
+//         height: 60px
+//       .others_details_sec
+//         h5
+//           font-weight: 700
+//           margin-bottom: 4px
+//           font-size: 18px
+   
+//   .banner_title_section
+//     width: 96%
+//     transform: translate(2%, -128%)   
+//     text-align: center
+//     .banner_title
+//       font-size: 36px
+//       .color
+//         color: #0C6151
+//         font-weight: 900
+//     .banner_text
+//       color: #000
+//       margin: 20px 0px
+//     .buy_now_section
+//       padding: 30px 0px
+//       // display: flex
+//       // flex-direction: column
+//       // gap: 10px
+//       // align-items: center
+//       .primary_btn
+//         background: #0C6151
+//         color: #fff
+//         padding: 18px 20px
+//         border-radius: 50px 
+//         border: 1px solid #0C6151
+//         font-size: 20px
+//         font-weight: 600
+//         width: 214px
+//         text-align: center
+//         &:hover
+//           background: transparent
+//           color: #000
+//           border: 1px solid #000
+//       .secondary_btn
+//         font-weight: 600
+//         font-size: 20px
+//         margin-left: 10px
+//         background: transparent
+//         color: #000
+//         padding: 18px 20px
+//         border-radius: 50px 
+//         border: 1px solid #000
+//         width: 214px
+//         text-align: center
+//         &:hover
+//           background: #0C6151
+//           color: #fff
+//           border: 1px solid #0C6151
+
+//   .carousel-indicators
+//     position: absolute
+//     bottom: 12%
+//     left: 40%
+//     display: flex
+//     gap: 2px
+//     list-style: none
+//     padding: 0
+//     margin: 0
+//     right: unset
+//     li
+//       width: 7px
+//       height: 10px
+//       background-image: url('../img/dot_btn.png') // dot for inactive
+//       background-size: contain
+//       background-repeat: no-repeat
+//       background-position: center
+//       opacity: 0.8
+//       cursor: pointer
+//       transition: all 0.3s ease
+//       background-color: unset
+//       &.active
+//         width: 52px
+//         height: 10px
+//         background-image: url('../img/active_btn.png') // dash for active
+//         background-size: contain
+//         background-repeat: no-repeat
+//         background-position: center
+//         opacity: 1
+
+//   .about_section
+//     padding: 30px 0px 30px 0px
+//     text-align: center
+//     .about_content_sec
+//       display: flex
+//       justify-content: center
+//       align-items: center
+//       .about_content
+//         padding-bottom: 40px
+//         .about_title
+//           font-family: "Red Rose" !important
+//           justify-content: center
+//           display: flex
+//           align-items: center
+//           gap: 8px
+//           font-weight: 900
+//           img
+//             width: 156px
+//             height: 37px
+//             margin-bottom: 3px  
+//         .about_text
+//           font-size: 18px
+//           margin: 20px 0px 40px 0px
+//         .buy_now_section
+//           text-align: center
+//           .primary_btn
+//             background: #0C6151
+//             color: #fff
+//             padding: 18px 36px
+//             border-radius: 50px 
+//             border: 1px solid #0C6151
+//             font-size: 20px
+//             font-weight: 600
+//             &:hover
+//               background: transparent
+//               color: #000
+//               border: 1px solid #000
+//     .about_img_sec
+//       background: #0C6151
+//       border-radius: 10px
+//       padding: 30px
+//       display: flex
+//       justify-content: center
+//       img
+//         width: 90%
+      
+//   .products_sec
+//     padding: 0px 0px 50px 0px
+//     position: relative
+//     background: linear-gradient(180deg, #FFE54E 0%, #F8F7F0 100%)
+//     .mb_flex
+//       display: flex
+//       gap: 20px
+//     .our_prd_masks_img
+//       width: 26%
+//       position: absolute
+//       top: -16px
+//     .product_content
+//       text-align: center
+//       padding: 30px 0px 10px 0px
+//       .prd_title
+//         font-family: "red rose"
+//         font-weight: 900
+//     .product_deatils_sec
+//       background: #fff
+//       border-radius: 10px
+//       padding: 40px 30px
+//       color: #000
+//       text-align: center
+//       &:hover
+//         background: #0C6151
+//         color: #fff
+//         .readmore_btn
+//           color: #fff
+//         .product_deatils_sec_link
+//           color: #fff
+//       .product_deatils_sec_link
+//         color: #000
+//       .prd_img
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         img
+//           width: 66%
+//       .product_title
+//         font-weight: 700
+//       .product_text
+//       .readmore_btn
+//         color: #0C6151 
+        
+
+
+
