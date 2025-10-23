@@ -1,229 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php $this->load->view('layout/meta');  ?>
-    <?php $this->load->view('layout/styles');  ?>
-    <style>
-    .lead_form_block .form-group{
-        display: flex;
-    flex-direction: column;
-    }
-    .lead_form_block label{
-            text-align: left;
-    }
-    .lead_form_block label.is-invalid {
-        color: red;
-        text-align: left;
-        width: 100%;
-        text-transform: math-auto;
-    }
-    .lead_form_block .form-control.is-invalid {
-        border-color: #000;
-        background-image: none;
-        /*border: 1px solid #aaa;*/
-    }
-    .lead_form_block .form-control.is-invalid:focus{
-            box-shadow: none;
-    }
-    .contact_us_sec .form-control {
-      font-size: 14px;
-    }
-    .contact_us_sec .label_contactus {
-        display: flex;
-        text-align: left;
-    }
-    .the-count {
-      text-align: end;
-    }
-    @media (max-width: 767px){
-        .for_mobile_responsive {
-            display: flex !important;
-            flex-direction: column !important;
-        }
-        .mbpadding{
-            padding: 10px 0px !important;
-        }
-    }
-</style>
-</head>
-<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- Page Loading -->
-    <div id="loading"></div>
-    <!-- Nav Menu  -->
-    <?php $this->load->view('layout/nav');  ?>
-    <!-- contact_us -->
-    <section id="contact_us" class="contact_us_sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 contact_us">
-                    <h1 class="fs-16">Contact Us</h1>                      
-                    <h3 class="sub_title">Get in Touch with us</h3>
-                    <div class="contact_us_details">
-                        <img loading="eager" src="<?php echo base_url();?>assets/img/mail.png?Version=<?php echo Version; ?>"
-                            alt="mail">
-                        <div class="company_details">
-                            <h4>Mail</h4>
-                            <a href="mailto:internationalsales@azistabhutanhealthcare.com">internationalsales@azistabhutanhealthcare.com</a>
-                        </div>
-                    </div>
-                    <div class="contact_us_details">
-                        <img loading="eager" src="<?php echo base_url();?>assets/img/whatsapp.png?Version=<?php echo Version; ?>"
-                            alt="whatsapp">
-                        <div class="company_details">
-                            <h4>Reach Us On Whatsapp Number</h4>
-                            <a href="tel:+975-17806579">+975-17806579</a>
-                        </div>
-                    </div>
-                    <div class="contact_us_details">
-                        <img loading="eager" src="<?php echo base_url();?>assets/img/whatsapp.png?Version=<?php echo Version; ?>"
-                            alt="whatsapp_1">
-                        <div class="company_details">
-                            <h4>For International Enquiries, Reach <br> Us On Whatsapp</h4>
-                            <a href="tel:+65-83212026">+65-83212026</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6" id='zohoSupportWebToCase' align='center'>
-                    <form name='zsWebToCase_918976000019547015' id='zsWebToCase_918976000019547015'
-                        action='https://helpcenter.azistaindustries.com/support/WebToCase' method='POST' class="leadForm lead_form_block"
-                        onSubmit='return zsValidateMandatoryFields()' enctype='multipart/form-data'> <input type='hidden'
-                            name='xnQsjsdp' value='edbsn20828c528ec996d103a8578d69dabfe5' />
-                        <input type='hidden' name='xmIwtLD'
-                            value='edbsnfa0928a06d959acaceddd7417d95187485715b41a69153736f469b3751481023' />
-                        <input type='hidden' name='xJdfEaS' value /> <input type='hidden' name='actionType' value='Q2FzZXM=' /> <input
-                            type="hidden" id="property(module)" value="Cases" /> <input type="hidden" id="dependent_field_values_Cases"
-                            value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&#x5d;&#x7d;" />
-                        <input type='hidden' name='returnURL' value='https&#x3a;&#x2f;&#x2f;www.caritero.com&#x2f;successzoho' />    
-                        <div class="row w-96">
-                            <div class="col-md-4 my-3">
-                                <label class="label_contactus" for="enquiry_name">Full Name</label><br>
-                                <!-- <input class="form-control" type="text" name="enquiry_name" /> -->
-                                <input type='text' maxlength='120' name='Contact Name'
-                                class='manfieldbdr form-control' placeholder="Please enter your name" />
-                                <label id="Contact_Name-error" class="is-invalid" for="Contact_Name"></label>
-                            </div>
-                            <div class="col-md-4 my-3">
-                                <label class="label_contactus" for="enquiry_mail">Email Address</label><br>
-                                <!-- <input class="form-control" type="text" name="enquiry_mail" /> -->
-                                <input type='text' maxlength='120' name='Email' value
-                                class='manfieldbdr form-control' placeholder="Enter your email Address" />
-                                <label id="Email-error" class="is-invalid" for="Email"></label>
-                            </div>
-                            <div class="col-md-4 my-3">
-                                <label class="label_contactus" for="enquiry_contact">Phone Number</label><br>
-                                <!--<input class="form-control" type="text" name="enquiry_contact" maxlength="12" validator="mobile" />-->
-                                <input type='text' maxlength='120' name='Phone' class="form-control" validator='mobile'  placeholder="Enter your mobile number" />
-                                <label id="Phone-error" class="is-invalid" for="Phone"></label>
-                            </div>
-                            <!-- <div class="col-md-4 my-3">
-                                <label class="label_contactus" for="enquiry_location">Location</label><br>
-                                <input type="text" name="enquiry_location" />
-                            </div> -->
-                            <div class="col-sm-12 my-3">
-                                <label class="label_contactus" for="enquiry_contact">Subject</label><br>
-                            <input type='text' maxlength='255' name='Subject' value  placeholder="Enter specialisation"
-                                class='manfieldbdr form-control' />
-                                <label id="Subject-error" class="is-invalid" for="Subject"></label>
-                            </div>
-                            <div class="col-sm-12 my-3">
-                                <label class="label_contactus" for="enquiry_comments">Comment</label><br>
-                                <!--<textarea class="form-control" autocomplete="off" name="enquiry_comments" minlength="3"-->
-                                <!--    maxlength="600" placeholder="Enter your message"></textarea>-->
-                                    <textarea name='Description' maxlength='3000' width='250' class="form-control" autocomplete="off" minlength="3"  maxlength="600" height='250'  placeholder="Enter your message"></textarea>
-                                    <label id="Description-error" class="is-invalid" for="Description"></label>
-                                <div id="the-count" class="the-count"><span id="current">0</span><span id="maximum">/600</span></div>
-                            </div>
-                            <?php if(Recaptcha == 'True'){ ?>
-                            <?php if(($this->config->item('google_key')) && ($this->config->item('google_secret'))){ ?>
-                            <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
-                            <?php } else { echo "Check Google Recaptcha Settings"; } ?>
-                            <?php } ?>
-                            <div class="col-md-12 form_submit">
-                                <!-- <input type="submit" class="primary_btn" id="submit" value="Submit"> -->
-                                <input type='submit' id="zsSubmitButton_918976000019547015" class='zsFontClass primary_btn' value='Submit'>
-                            </div>
-                        </div>
-                </form>
-                </div>
-            </div>
-        </div>
-    </section>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
-  
-    <script>
-        $(document).ready(function () {
-            $("#zsWebToCase_918976000019547015").validate({
-                rules: {
-                    "Contact Name": {
-                        required: true
-                    },
-                    Email: {
-                        required: true,
-                        email: true
-                    },
-                    Phone: {
-                        required: true,
-                        digits: true,
-                        minlength: 10,
-                        maxlength: 10
-                    },
-                    Subject: {
-                        required: true
-                    },
-                    Description: {
-                        required: true,
-                        minlength: 10,
-                        maxlength: 600
-                    }
-                },
-                messages: {
-                    "Contact Name": {
-                        required: "Please enter your name"
-                    },
-                    Email: {
-                        required: "Please enter your email address",
-                        email: "Please enter a valid email address"
-                    },
-                    Phone: {
-                        required: "Please enter your mobile number",
-                        digits: "Please enter at least 10 characters.",
-                        minlength: "Please enter at least 10 characters.",
-                        maxlength: "Please enter at least 10 characters."
-                    },
-                    Subject: {
-                        required: "Please enter your specialisation"
-                    },
-                    Description: {
-                        required: "Please describe what you're looking for",
-                        minlength: "Minimum 10 characters required",
-                        maxlength: "Maximum 600 characters allowed"
-                    }
-                },
-                errorClass: "is-invalid",
-                validClass: "is-valid",
-                errorPlacement: function (error, element) {
-                    error.insertAfter(element); // you can customize this
-                }
-            });
-            //Phone Only Numbers
-			$("input[validator='mobile']").on("input", function(e) {
-				var self = $(this);
-				self.val(self.val().replace(/[^0-9]/g, ''));
-				if((e.keyCode >= 48 && e.keyCode <=57) || (e.keyCode >= 96 && e.keyCode <=105)) {
-					// entered key is a number
-				}else{
-					e.preventDefault();
-				}
-			});
-        });
-</script>
-    <!-- footer -->
-    <?php $this->load->view('layout/footer');  ?>
-    <!--  JavaScript -->
-    <?php $this->load->view('layout/js');  ?>
-    <?php if(DisclaimerPopUp == 'True'){ $this->load->view('layout/disclaimerhomepage'); }?>
-    <?php if(Popbox == 'True'){ $this->load->view('layout/popbox'); }?>
-    <?php if(OnLoadModal == 'True'){ $this->load->view('layout/onloadmodal'); }?>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<?php $this->load->view('layout/meta');  ?>
+	<?php $this->load->view('layout/styles');  ?>
+	<style>
+		.breadcrumb-wrapper.scrolled .breadcrumb{
+			width: 200px;
+		}
+		.contact_us_sec .contact_us_links .social_link .social_icons ul {
+            display: flex;
+            gap: 18px;
+            margin-top: 1rem;
+            margin-bottom: 26px;
+        }
+	</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.patchmantra.com/contact-us",
+      "url": "https://www.patchmantra.com/contact-us",
+      "name": "Contact PatchMantra – Reach Out for Patch Therapy Support",
+      "description": "Get in touch with PatchMantra for inquiries, support, or feedback about our transdermal patch therapies.",
+      "mainEntity": {
+        "@type": "ContactPage",
+        "contactOption": "Customer Service",
+        "contactType": "Customer Support",
+        "availableLanguage": "English",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-1800-103-4696",
+          "contactType": "Customer Service",
+          "areaServed": "IN",
+          "availableLanguage": "English"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sy No. 83/1, Plot No.16/A/1 & 16/A/2, 19th & 20th Floor Hetero Tower",
+          "addressLocality": "Commerzone, Silpa Gram Craft Village, Madhapur",
+          "addressRegion": "Telangana",
+          "postalCode": "500081",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.instagram.com/patchmantra",
+          "https://www.youtube.com/@patchmantra",
+          "https://www.facebook.com/patchmantra",
+          "https://www.linkedin.com/company/patchmantra"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.patchmantra.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us",
+          "item": "https://www.patchmantra.com/contact-us"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div id="loading"></div>
+	<!-- Nav Menu  -->
+	<?php $this->load->view('layout/nav');  ?>
+
+	<div class="breadcrumb-wrapper">
+		<div class="breadcrumb">
+			<a href="<?php echo base_url();?>">Home</a>
+			<span class="separator"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+			<a href="<?php echo base_url();?>contact-us"><strong>Contact Us</strong></a>
+		</div>
+	</div>
+
+    <section id="contact_us" class="contact_us_sec">
+        <div class="container-fluid">
+            <div class="row contact_us_info">
+                <div class="col-md-4 contact_us">
+                    <div class="contact_us_links sticky-top">
+                        <h1>Have a Question?</h1>                      
+                        <h6 >We’d Love To Hear It</h6>
+                        <div class="d-flex justify-content-center">
+                            <img loading="eager" src="<?php echo base_url();?>assets/img/contact_us_img.png?Version=<?php echo Version; ?>"
+                                alt="contact_us_img">
+                        </div>    
+                        <hr>
+                        <div class="social_link">
+                            <h6 class="footer_title">Follow Us</h6>
+                            <div class="social_icons">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.instagram.com/patchmantra" target="_blank">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/@PatchMantra?themeRefresh=1" target="_blank">
+                                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <!--<li>-->
+                                    <!--    <a href="https://in.linkedin.com/company/hetero-healthcare-limited" target="_blank">-->
+                                    <!--        <i class="fa fa-linkedin" aria-hidden="true"></i>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--    <a href="https://twitter.com/HeteroHCL" target="_blank">-->
+                                    <!--        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">-->
+                                    <!--            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>-->
+                                    <!--        </svg>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--    <a href="https://www.facebook.com/HeteroHealthcareOfficial/" target="_blank">-->
+                                    <!--        <i class="fa fa-facebook" aria-hidden="true"></i>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--    <a href="https://in.pinterest.com/heterohealthcare" target="_blank">-->
+                                    <!--        <i class="fa fa-pinterest" aria-hidden="true"></i>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--    <a href="" target="_blank">-->
+                                    <!--        <i class="fa fa-reddit-alien" aria-hidden="true"></i>-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--    <a href="" target="_blank">-->
+                                    <!--        <i class="fa fa-quora" aria-hidden="true"></i>-->
+                                    <!--    </a>-->
+                                    <!--</li>					-->
+                                                            
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+
+                </div>  
+               <div class="col-md-8 contact_form">
+                    <div class="display_flex">
+                        <div class="contact_us_details">
+                            <img loading="eager" 
+                                src="<?php echo base_url();?>assets/img/call.png?Version=<?php echo Version; ?>" alt="call">
+                                <a href="tel:18001034696">1800 103 4696</a>
+                        </div>					
+                        <div class="contact_us_details">
+                            <img loading="eager" 
+                                src="<?php echo base_url();?>assets/img/mail.png?Version=<?php echo Version; ?>" alt="call">
+                                <a href="mailto:sales@heterohealthcare.com">sales@heterohealthcare.com</a>
+                        </div>
+                    </div>
+                    					
+					<div class="contact_us_details">
+						<img loading="eager" 
+							src="<?php echo base_url();?>assets/img/location.png?Version=<?php echo Version; ?>" alt="location">
+							<a>Sy No. 83/1, Plot No.16/A/1 & 16/A/2, 19th & 20th Floor Hetero Tower, Commerzone, Silpa Gram Craft Village, Madhapur, Hyderabad, Shaikpet, Telangana, India - 500 081.</a>
+					</div>
+
+                    <hr>
+
+                    <form id="lead_form" name="lead_form" method="post" class="leadForm lead_form_block">
+                        <div class="row">
+                            <div class="col-md-6 my-2">
+                                <label class="label_contactus" for="enquiry_name">Name *</label>
+                                <input class="form-control" type="text" name="enquiry_name" placeholder="Your name" />
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label class="label_contactus" for="enquiry_mail">Mail Id *</label>
+                                <input class="form-control" type="text" name="enquiry_mail" placeholder="Your mail address" />
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label class="label_contactus" for="enquiry_contact">Mobile Number *</label>
+                                <input type="text" name="enquiry_contact" placeholder="Your mobile number" maxlength="12" class="form-control" validator="mobile" />
+                            </div>
+                            
+                            
+                             <div class="col-md-6 my-2">
+                                <label class="label_contactus" for="enquiry_subject">Product *</label>
+                                <!-- <input type='text' maxlength='255' name='enquiry_subject' value='' class='form-control' placeholder="Enter your Subject"/> -->
+                                 <select class="form-control" name="product_name">
+                                    <option value="" selected="">Select the Product You Need Help With</option>
+                                    <option value="Lidocaine Patches (Topical Anesthetic)">
+                                        Lidocaine Patches (Topical Anesthetic)
+                                    </option>
+                                    <option value="NSAID Patches (Non-Steroidal Anti-Inflammatory Drugs)">
+                                        NSAID Patches (Non-Steroidal Anti-Inflammatory Drugs)</option>
+                                    <option value="Capsaicin Patches (Natural Irritant Therapy)">
+                                        Capsaicin Patches (Natural Irritant Therapy)</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 my-2">
+                                <label class="label_contactus" for="enquiry_comments">Your Message</label>
+                                <textarea class="form-control" autocomplete="off" name="enquiry_comments" minlength="3"
+                                    maxlength="600" placeholder="Enter the purpose"></textarea>
+                                <div id="the-count" class="the-count"><span id="current">0</span><span id="maximum">/600</span>
+                                </div>
+                            </div>
+                            <?php if(Recaptcha == 'True'){ ?>
+                            <?php if(($this->config->item('google_key')) && ($this->config->item('google_secret'))){ ?>
+                            <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+                            <?php } else { echo "Check Google Recaptcha Settings"; } ?>
+                            <?php } ?>
+                            <div class="col-md-12 form_submit">
+                                <input type="submit" class="secondary_btn" id="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+	<?php $this->load->view('layout/footer');  ?>
+	<!--  JavaScript -->
+	<?php $this->load->view('layout/js');  ?>
+	<?php if(DisclaimerPopUp == 'True'){ $this->load->view('layout/disclaimerhomepage'); }?>
+	<?php if(Popbox == 'True'){ $this->load->view('layout/popbox'); }?>
+	<?php if(OnLoadModal == 'True'){ $this->load->view('layout/onloadmodal'); }?>
+	<script>
+		window.addEventListener("scroll", function() {
+			const breadcrumbWrapper = document.querySelector(".breadcrumb-wrapper");
+			if (window.scrollY > 50) {
+				breadcrumbWrapper.classList.add("scrolled");
+			} else {
+				breadcrumbWrapper.classList.remove("scrolled");
+			}
+		});
+	</script>
+</body>
+
 </html>
