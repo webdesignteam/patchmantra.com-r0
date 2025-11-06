@@ -1,3 +1,10 @@
+
+
+
+   
+
+
+
 <!-- Nav Menu  -->
 <div class="row nav_menu">	
 	<nav class="navbar navbar-expand-lg navbar-light light fixed-top">		
@@ -44,11 +51,12 @@
 				</ul>
 			</div>
 		</div>
-		 <div class="chatboat_img_sec">
-		    <a href="http://20.235.149.147:5081/" target="_blank">
-		        <img loading="eager" src="<?php echo base_url();?>assets/img/chatboat_img.png?Version=<?php echo Version; ?>" alt="About Us">
-		    </a>
-		</div>
+		<!-- <div class="chatboat_img_sec">-->
+		<!--    <a href="https://mantrabot.patchmantra.com/">-->
+		<!--        <img loading="eager" src="<?php echo base_url();?>assets/img/chatboat_img.png?Version=<?php echo Version; ?>" alt="Chartbot">-->
+		<!--    </a>-->
+		<!--</div>-->
 	</nav>
 		
-</div>
+</div>
+

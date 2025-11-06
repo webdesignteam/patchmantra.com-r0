@@ -620,6 +620,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			document.getElementById("popup").style.display = "none";
 		});
 	</script>
+		<?php $this->load->view('layout/chartbot');  ?>
 	<?php $this->load->view('layout/footer');  ?>
 	<!--  JavaScript -->
 	<?php $this->load->view('layout/js');  ?>
