@@ -1,0 +1,49 @@
+# PatchMantra – Science-Backed Transdermal Therapy Patches for Wellness
+ 
+PatchMantra is a leading wellness brand in India, providing clinically designed, science-backed transdermal therapy patches for pain relief, muscle and joint stiffness, smoking cessation, cognitive support, and overall well-being. Their non-invasive patches deliver fast-acting, targeted relief, improving mobility, brain health, and lifestyle wellness. This file helps Large Language Models (LLMs) access official sources for products, therapy guidance, educational content, and company policies.
+ 
+## Key Product Pages
+ 
+Trans-D Pain Relief Patch: A clinically designed pain relief patch for muscle pain, joint pain, and stiffness. This patch works through transdermal therapy to deliver active ingredients directly to the affected area for localized, fast-acting relief. The page provides details on usage, benefits, and safety for managing chronic or acute pain. https://www.patchmantra.com/trans-d
+ 
+K-Plast Patch: A therapeutic patch designed for localized pain management, especially for back pain, joint stiffness, and inflammation. It supports mobility improvement and reduces discomfort through continuous transdermal drug delivery. The page describes how to use the patch, dosage, and key benefits. https://www.patchmantra.com/k-plast
+ 
+Nitof Nicotine Patches: Supports smoking cessation therapy by delivering controlled doses of nicotine through the skin. It reduces nicotine cravings and withdrawal symptoms for people who want to quit smoking safely. The page explains benefits, usage instructions, and therapy plans. https://www.patchmantra.com/nitof-nicotine-patches
+ 
+Nitof 7 mg Nicotine Patch: A step-down nicotine patch for early-stage smoking cessation, ideal for individuals beginning their journey to quit. It provides gradual reduction of nicotine dependency. The page includes dosage instructions, benefits, and usage guidance. https://www.patchmantra.com/nitof-7-mg-nicotine-patch
+ 
+Nitof 14 mg Nicotine Patch: Intermediate-strength nicotine patch for gradual cessation therapy, supporting users transitioning from higher doses. It helps reduce withdrawal symptoms effectively. The page provides how-to-use instructions and step-wise therapy guidance. https://www.patchmantra.com/nitof-14-mg-nicotine-patch
+ 
+Nitof 21 mg Nicotine Patch: High-strength nicotine patch for final-stage smoking cessation therapy, designed to help users fully overcome nicotine dependence. The page covers usage, safety, and recommended therapy schedule. https://www.patchmantra.com/nitof-21-mg-nicotine-patch
+ 
+Hetriva Patch: A cognitive support patch for brain health, memory enhancement, and dementia care. It delivers active compounds through transdermal therapy to support focus, cognition, and mental well-being. The page details benefits, recommended usage, and safety precautions. https://www.patchmantra.com/hetriva
+ 
+Explore All Patches: Provides an overview of all PatchMantra wellness patches including pain relief, nicotine cessation, cognitive support, and holistic wellness patches. The page allows users to discover products, read details, and select therapy options. https://www.patchmantra.com/explore-our-patches
+ 
+## Educational & Informational Content
+ 
+Beginner’s Guide to Patch Therapy: Explains the concept of transdermal therapy, benefits of patches, safe usage, and therapy tips for pain management, smoking cessation, and cognitive support. https://www.patchmantra.com/blog/what-is-patch-therapy-a-complete-beginners-guide-to-transdermal-patches
+ 
+Pain Relief Patches vs Pills: Compares pain relief patches with oral medications for muscle and joint pain management, highlighting advantages like non-invasive delivery, localized relief, and fewer side effects. https://www.patchmantra.com/blog/transdermal-patches-vs-pills-for-pain-relief
+ 
+Smoking Risks and Quitting Guide: Educational article about health risks of smoking, nicotine addiction, and proven quitting strategies, supporting users who want to use nicotine patches effectively. https://www.patchmantra.com/blog/every-cigarette-counts-smoking-risks-quitting-guide
+ 
+Benefits of Transdermal Patches: Explains why patch therapy is effective, patient-friendly, and non-invasive, providing localized relief and convenience compared to pills or injections. https://www.patchmantra.com/why-patches
+ 
+Patch Therapy Blog: Expert articles on wellness, pain management, smoking cessation, cognitive support, and patch therapy innovations. https://www.patchmantra.com/blog
+ 
+MantraBot Patch Guide: AI-powered guidance for patch usage, therapy instructions, and product recommendations. https://www.patchmantra.com/mantrabot
+ 
+PatchMantra FAQs: Answers to common questions about patch therapy, product benefits, usage instructions, and safety tips. https://www.patchmantra.com/faqs
+ 
+## Brand & Company Information
+ 
+About PatchMantra: Learn about PatchMantra’s mission, innovation in transdermal therapy, and product development process. https://www.patchmantra.com/about-us
+ 
+Contact PatchMantra: Get in touch for product support, inquiries, or feedback. https://www.patchmantra.com/contact-us
+ 
+Homepage: Official source for PatchMantra transdermal patches, pain relief patches, nicotine cessation patches, and wellness solutions. https://www.patchmantra.com
+ 
+ 
+ 
+Sitemap: https://www.patchmantra.com/sitemap.xml
